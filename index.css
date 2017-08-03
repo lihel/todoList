@@ -1,0 +1,12 @@
+#main {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    border: solid 1px rgba(54, 70, 88, 0.62);
+}
+
+.head{
+    padding: 5% 0 2% 43%;
+    font-size: 5.5em;
+    color: pink;
+}
