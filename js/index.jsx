@@ -39,17 +39,31 @@ class Greeting extends React.Component {
     }
 
     render() {
+        let txtCenter = {
+            paddingLeft: 180
+        }
+        let checkboxStyle = {
+            paddingLeft: 0
+        }
+        let textStyle = {
+            width: 300,
+            height: 30,
+            borderRadius: 15,
+        }
         return (
             <div>
-                <input type="text" ref="myWork" placeholder="What need to be done?" onKeyUp={this.Enter}/>
+                <div style={txtCenter}>
+                    <input type="text" style={textStyle} ref="myWork" placeholder="What need to be done?"
+                           onKeyUp={this.Enter}/>
+                </div>
 
-                <ul>
-                    {
-                        this.state.work_list.map(function (textValue) {
-                            return <li key={textValue}>{textValue}</li>;
-                        })
-                    }
-                </ul>
+                {
+                    this.state.work_list.map(function (textValue) {
+                        return (
+                            <div style={checkboxStyle}><input key={textValue} type="checkbox"/>{textValue}</div>
+                        );
+                    })
+                }
 
             </div>
         );
